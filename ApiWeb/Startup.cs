@@ -8,6 +8,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using Persistence;
+using Shared;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,8 +28,10 @@ namespace ApiWeb
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
-        {
+        {            
             services.AddApplicationLayer();
+            services.AddSharedInfrastructure(Configuration);
+            services.AddPersistenceInfraestructure(Configuration);
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
