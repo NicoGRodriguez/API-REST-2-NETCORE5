@@ -11,14 +11,11 @@
     <PackageReference Include="FluentValidation" Version="10.3.6" />
     <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="10.3.6" />
     <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="10.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Caching.Abstractions" Version="6.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="DTOs\" />
-    <Folder Include="Features\Clients\Commands\DeleteClientCommand\" />
-    <Folder Include="Features\Clients\Commands\UpdateClientCommand\" />
-    <Folder Include="Features\Clients\Queries\GetAllClients\" />
-    <Folder Include="Features\Clients\Queries\GetClientById\" />
     <Folder Include="Filters\" />
   </ItemGroup>
 
