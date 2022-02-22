@@ -1,5 +1,6 @@
 using ApiWeb.Extensions;
 using Application;
+using Identity;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -23,7 +24,8 @@ namespace ApiWeb
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {            
-            services.AddApplicationLayer();           
+            services.AddApplicationLayer();
+            services.AddIdentityInfraestruture(Configuration);
             services.AddSharedInfrastructure(Configuration);
             services.AddPersistenceInfraestructure(Configuration);
             services.AddControllers();
